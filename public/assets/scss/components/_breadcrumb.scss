@@ -1,0 +1,114 @@
+/**=====================
+     breadcrumb css start
+==========================**/
+.breadcrumb-section {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-position: top left !important;
+
+    &.breadcrumb-sm {
+        height: auto;
+        background-image: var(--theme-gradient3);
+
+        .breadcrumb-content {
+            height: unset;
+            padding: 0;
+
+            >div {
+                background-color: transparent;
+                padding-left: 0;
+                padding-right: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                h2 {
+                    margin-bottom: 0;
+                    line-height: 1.3;
+                    margin-top: -6px;
+                }
+
+                nav {
+                    padding-top: 1px;
+                    .breadcrumb {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .breadcrumb-content {
+        @extend %flex-center;
+        justify-content: unset;
+        height: 500px;
+        padding-top: 89px;
+
+        div {
+            h2 {
+                color: $white;
+                font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (1920 - 320)));
+                line-height: 1.2;
+                display: inline-block;
+
+            }
+
+            .breadcrumb {
+                background-color: transparent;
+                margin-bottom: 0;
+                padding: 0;
+
+                .breadcrumb-item {
+                    line-height: 1.4;
+                    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+                    color: rgba($white, 0.8);
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    font-family: $font_2, $font_3;
+
+                    a {
+                        color: rgba($white, 0.8);
+                    }
+
+                    +.breadcrumb-item {
+                        &:before {
+                            font-family: "Font Awesome 5 free";
+                            font-weight: 900;
+                            content: "\f101";
+                            color: rgba($white, 0.8);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.breadcrumb-right {
+            justify-content: flex-end;
+            text-align: right;
+        }
+    }
+}
+
+.effect-cls {
+    &.breadcrumb-section {
+        height: calc(300px + (580 - 300) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        background: url(../../images/effect.png);
+        bottom: -12px;
+        width: 100%;
+        height: 110px;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+/**=====================
+     breadcrumb css end
+==========================**/

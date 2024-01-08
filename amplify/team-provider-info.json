@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-idenrealestate-dev-164831-authRole",
+      "UnauthRoleArn": "arn:aws:iam::812096089383:role/amplify-idenrealestate-dev-164831-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::812096089383:role/amplify-idenrealestate-dev-164831-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-idenrealestate-dev-164831-deployment",
+      "UnauthRoleName": "amplify-idenrealestate-dev-164831-unauthRole",
+      "StackName": "amplify-idenrealestate-dev-164831",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:812096089383:stack/amplify-idenrealestate-dev-164831/1ac63f40-6ce3-11ee-9c8e-0aa510102155",
+      "AmplifyAppId": "d4gyqoqvo0z59"
+    },
+    "categories": {
+      "auth": {
+        "idenrealestate89cd4ca1": {}
+      },
+      "function": {
+        "idenrealestatePostConfirmation": {
+          "deploymentBucketName": "amplify-idenrealestate-dev-164831-deployment",
+          "s3Key": "amplify-builds/idenrealestatePostConfirmation-69713739567577494353-build.zip"
+        }
+      },
+      "api": {
+        "idenrealestate": {}
+      },
+      "storage": {
+        "idenrealestate": {}
+      }
+    }
+  }
+}

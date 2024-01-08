@@ -1,0 +1,11 @@
+module.exports = {
+  debug: process.env.NODE_ENV === "development",
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "ar", "fr", "es"],
+   //
+  //  localePath: path.resolve("../public/locales"), // Corrected "localepath" to "localePath"
+  },
+  reloadOnPrerender: process.env.NODE_ENV === "development",
+};
+

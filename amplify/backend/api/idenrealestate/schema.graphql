@@ -1,0 +1,191 @@
+type User
+ @model
+ @auth(
+  rules: [
+   { allow: public, operations: [read] }
+   { allow: private, operations: [read] }
+   { allow: owner, ownerField: "username", operations: [read, update] }
+  ]
+ ) {
+ id: ID!
+ avatar: String
+ name: String!
+ gender: String
+ birthday: String
+ address: String
+ city: String
+ state: String
+ zipcode: String
+ bio: String
+ email: String!
+ phone_number: String!
+ role: String!
+ email_verified: Boolean
+ status: String @default(value: "active")
+ createdAt: String
+ updatedAt: String
+}
+
+type Property
+ @model
+ @auth(
+  rules: [
+   { allow: public, operations: [read] }
+   { allow: owner, ownerField: "ownerId", operations: [create, read, delete, update] }
+  ]
+ ) {
+ id: ID!
+ title: String!
+ slug: String! @index(name: "getPropertyBySlug")
+ description: String!
+ property_purpose: String!
+ property_category: String!
+ propety_type: String!
+ property_price: Int
+ price_unit: String
+ monthly_rent: Int
+ max_rooms: Int
+ baths: Int
+ kitchens: Int
+ beds: Int
+ city: String
+ area: Int
+ area_unit: String
+ gallery: [String]
+ video: String
+ features: Features
+ contact_info: ContactInfo
+ address: Address
+ status: String @default(value: "inactive")
+ createdAt: AWSDateTime
+ ownerId: ID!
+  @index(
+   name: "byUserId"
+   sortKeyFields: ["createdAt"]
+   queryField: "listPropertyByUserId"
+  )
+ owner: User! @hasOne(fields: ["ownerId"])
+}
+
+type Features {
+ main: MainFeature
+ plot: PlotFeatures
+ bussiness: BussinessFeature
+ community: CommunityFeature
+ healthcare: HealthCareFeature
+ nearby: NearByFeature
+ other: OtherFeature
+}
+
+type MainFeature {
+ flooring: String
+ electricity_backup: String
+ built_in_year: Int
+ parking_spaces: Int
+ floors: Int
+ floors_in_building: Int
+ lobby_in_building: Int
+ number_of_units: Int
+ elevators: Int
+ central_air_conditioning: Boolean
+ public_parking: Boolean
+ double_glazed_windows: Boolean
+ underground_parking: Boolean
+ waste_disposal: Boolean
+ central_heating: Boolean
+ service_elevators_in_building: Boolean
+ furnished: Boolean
+}
+
+type PlotFeatures {
+ nearby_water_resources: Boolean
+ disputed: Boolean
+ possesion: Boolean
+ sui_gas: Boolean
+ electricity: Boolean
+ tube_wells: Boolean
+ irrigation: Boolean
+ perimeter_fencing: Boolean
+ accessible_by_road: Boolean
+ boundary_wall: Boolean
+ boundary_lines: Boolean
+ land_fertility: Boolean
+ furnished: Boolean
+}
+
+type BussinessFeature {
+ broadban_internet_access: Boolean
+ cable_tv_ready: Boolean
+ intercom: Boolean
+ atm_machine: Boolean
+ mediaroom_in_building: Boolean
+ conference_room_in_building: Int
+}
+
+type CommunityFeature {
+ swimming_pool: Boolean
+ lawn: Boolean
+ medical_center: Boolean
+ gym: Boolean
+ kids_play_area: Boolean
+ day_care_center: Boolean
+ mosque: Boolean
+ bbq_area: Boolean
+ community_center: Boolean
+}
+
+type HealthCareFeature {
+ swimming_pool: Boolean
+ lawn: Boolean
+ jacuzzi: Boolean
+ sauna: Boolean
+}
+
+type NearByFeature {
+ schools: Boolean
+ hospitals: Boolean
+ shopping_malls: Boolean
+ restaurants: Boolean
+ airport_distance: Int
+ public_transport_service: Boolean
+}
+
+type OtherFeature {
+ emergency_exit: Boolean
+ cctv: Boolean
+ free_wifi: Boolean
+ free_parking: Boolean
+ air_conditioning: Boolean
+}
+
+type ContactInfo {
+ email: String
+ landline: String
+ mobile: String
+}
+
+type Address {
+ address: String
+ city: String
+ landmark: String
+ zipcode: String
+}
+type WishList {
+ id: ID
+ title: String
+ slug: String
+ description: String
+ property_price: Int
+ baths: Int
+ beds: Int
+ city: String
+ area: String
+ address: Address
+}
+
+type ContactQuery {
+ name: String
+ email: String
+ phone_number: String
+ message: String
+}

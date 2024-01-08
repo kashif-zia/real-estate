@@ -1,0 +1,213 @@
+/**=====================
+     Typography css start
+==========================**/
+
+body {
+  font-family: $font_0, $font_3;
+  position: relative;
+  background: white;
+  font-size: 14px;
+  color: $theme-font-color;
+  transition: unset !important;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+li {
+  display: inline-block;
+  font-size: 14px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.2;
+  color: $blue-font;
+
+  &.font-roboto {
+    letter-spacing: 0.5px;
+  }
+}
+
+a {
+  transition: 0.5s ease;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: var(--theme-default) !important;
+  }
+
+  &:hover {
+    text-decoration: none;
+    transition: 0.5s ease;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+button,
+.btn {
+  font-family: $font_0, $font_3;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.form-control {
+  &:focus {
+    box-shadow: none;
+  }
+  &::placeholder {
+    font-size: 14px;
+    font-family: $font_1, $font_3;
+    color: rgba($title-color, 0.4);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font_0, $font_3;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: calc(26px + (55 - 26) * ((100vw - 320px) / (1920 - 320)));
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.001em;
+  line-height: 1.1;
+  text-transform: capitalize;
+  color: $theme-font-color;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  color: $theme-font-color;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+section {
+  padding: 90px 0;
+}
+.section-pb{
+  padding-bottom: 90px;
+}
+.small-section {
+  padding: 60px 0;
+}
+
+.section-sm {
+  padding: 40px 0 0;
+}
+
+.custom-scrollbar {
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px transparent;
+  }
+
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 13px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 0 10px rgba(0, 0, 0, 0.02);
+    background-color: $white;
+  }
+}
+
+.p-t-40 {
+  padding-top: 40px;
+}
+
+.column-space {
+  margin-bottom: -50px;
+
+  >div {
+    padding: 0 25px;
+    margin-bottom: 50px;
+  }
+}
+
+.shadow-cls {
+  box-shadow: $common-box-shadow;
+}
+
+.radius-cls {
+  border-radius: 20px;
+}
+
+.card-header {
+  padding: 20px;
+}
+
+.theme-card {
+  box-shadow: 3.346px 3.716px 22.5px rgba(0, 0, 0, 0.07);
+  padding: 30px;
+
+  .card-header {
+    padding-top: 0;
+    h5 {
+      margin-bottom: 0;
+    }
+  }
+  .card-header, .card-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .card-body {
+    padding-top: 20px;
+  }
+
+  &+.theme-card {
+    margin-top: 45px;
+  }
+}
+
+.f-w-600 {
+  font-weight: 600;
+}
+
+/**=====================
+     Typography css end
+==========================**/

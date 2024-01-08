@@ -1,0 +1,102 @@
+/*!
+-----------------------------------------------------------------------------------
+Template Name: Sheltos - Real Estate HTML Template
+Template URI: https://themes.pixelstrap.com/sheltos/
+Description: This is Real Estate website
+Author: Pixelstrap
+Author URI: https://themeforest.net/user/pixelstrap
+-----------------------------------------------------------------------------------
+
+1. Template css
+	1.1 Reset CSS
+	1.2 Typography CSS
+	1.3 keyframes
+	1.4 Breadcrumb CSS
+	1.5 Buttons CSS
+	1.6 Label CSS
+	1.7 Slider CSS
+	1.8 Form CSS
+	1.9 Blog CSS
+	1.10 About CSS
+	1.11 Service CSS
+	1.12 Feature CSS
+	1.13 Property CSS
+	1.14 Pagination CSS
+	1.15 Portfolio CSS
+	1.16 Map CSS
+	1.17 Slick CSS
+	1.18 Testimonial CSS
+	1.19 Comming soon CSS
+	1.20 Loader CSS
+	1.21 Customizer CSS
+	1.22 Header CSS
+	1.23 Footer CSS
+	1.24 Text affect CSS
+	1.25 Inner pages CSS
+	1.26 Core Template CSS
+	
+	2. Dark mode CSS
+	3. RTL CSS
+	4. Responsive CSS
+	*/
+
+//google fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i");
+
+// utils
+@import "utils/variables";
+@import "utils/mixins";
+
+// base
+@import "base/typography";
+@import "base/reset";
+
+// components
+@import "components/keyframes";
+@import "components/breadcrumb";
+@import "components/buttons";
+@import "components/labels";
+@import "components/slider";
+@import "components/form";
+@import "components/blog";
+@import "components/about";
+@import "components/service";
+@import "components/feature";
+@import "components/property";
+@import "components/pagination";
+@import "components/portfolio";
+@import "components/map";
+@import "components/slick";
+@import "components/testimonial";
+@import "components/coming_soon";
+@import "components/loader";
+@import "components/customizer";
+
+// layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/dark";
+@import "layout/rtl";
+
+// pages
+@import "pages/inner-pages";
+@import "pages/text-affect";
+
+// Template
+@import "template/template";
+@import "template/responsive";
+
+
+// animate css
+@import "~animate.css/animate.css";
+
+// bootstrap css
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+// slick slider
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+// font-awesome
+@import "~@fortawesome/fontawesome-free/css/all.min.css";

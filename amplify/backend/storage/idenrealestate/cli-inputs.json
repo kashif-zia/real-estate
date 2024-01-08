@@ -1,0 +1,16 @@
+{
+  "resourceName": "idenrealestate",
+  "policyUUID": "0ca4a88e",
+  "bucketName": "idenrealestates3bucket",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
